@@ -107,7 +107,9 @@ jobs:
           path: dist
       - name: Deploy to npm
         if: ${{ github.event_name == 'push' }}
-        run: npm publish
+        uses: JS-DevTools/npm-publish@v1
+        with:
+          token: ${{ secrets.NPM_TOKEN }}
       - name: Send Slack Notification on Failure
         if: ${{ failure() }}
         uses: 8398a7/action-slack@v3
