@@ -107,6 +107,4 @@ jobs:
           path: dist
       - name: Deploy to npm
         if: ${{ github.event_name == 'push' }}
-        uses: JS-DevTools/npm-publish@v1
-        with:
-          token: ${{ secrets.NPM_TOKEN }}
+        run: npm publish
