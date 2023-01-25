@@ -175,7 +175,7 @@ export const Pestaña = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         alignitems: "center",
@@ -202,7 +202,7 @@ export const AddApplication = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         alignitems: "center",
@@ -218,7 +218,7 @@ export const more = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         alignitems: "center",
@@ -246,7 +246,7 @@ export const User = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         justifycontent: "center",
@@ -266,7 +266,7 @@ export const Settings = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         alignitems: "center",
@@ -292,7 +292,7 @@ export const Others = styled("div")(
   space,
   variant({
     variants: {
-      Container: {
+      container: {
         display: "flex",
         flexdirection: "row",
         alignitems: "center",
