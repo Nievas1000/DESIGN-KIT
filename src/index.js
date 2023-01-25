@@ -169,3 +169,146 @@ export const ButtonText = styled("p")(
     },
   })
 );
+
+export const Pestaña = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        alignitems: "center",
+        gap: "1em",
+        backgroundcolor: color,
+        padding: "0 1em",
+        borderwidth: "0px 1px",
+        borderstyle: "solid",
+        bordercolor: color,
+        "&:hover": {
+          background: color
+        },
+
+        "&::selection": {
+          background: color
+        },
+      },
+    },
+  })
+);
+
+export const AddApplication = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        alignitems: "center",
+        gap: "1em",
+        padding: "0 1em",
+      },
+    },
+  })
+);
+
+export const more = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        alignitems: "center",
+        gap: "1em",
+        backgroundcolor: color,
+        padding: "0 1em",
+        borderwidth: "0px 1px",
+        borderstyle: "solid",
+        bordercolor: color,
+
+        "&:hover": {
+          background: color
+        },
+
+        "&::selection": {
+          background: color
+        },
+      },
+    },
+  })
+);
+
+export const User = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        justifycontent: "center",
+        alignitems: "center",
+        gap: "1em",
+        padding: "1em",
+        borderwidth: "0px 1px",
+        borderstyle: "solid",
+        bordercolor: color,
+      },
+    },
+  })
+);
+
+export const Settings = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        alignitems: "center",
+        gap: "1em",
+        padding: "0 1em",
+        borderwidth: "0px 1px",
+        borderstyle: "solid",
+        bordercolor: color,
+        "&:hover": {
+          background: color
+        },
+
+        "&::selection": {
+          background: color
+        },
+      },
+    },
+  })
+);
+
+export const Others = styled("div")(
+  color,
+  space,
+  variant({
+    variants: {
+      Container: {
+        display: "flex",
+        flexdirection: "row",
+        alignitems: "center",
+        gap: "1em",
+        padding: "0 1em",
+        borderwidth: "0px 1px",
+        borderstyle: "solid",
+        bordercolor: color,
+        "&:hover": {
+          background: color
+        },
+
+        "&::selection": {
+          background: color
+        },
+      },
+    },
+  })
+);
