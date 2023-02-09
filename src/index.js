@@ -422,3 +422,17 @@ export const InputSearchClass = styled('input')`
 	height: 34px;
 	color: ${colors.grey.six};
 `;
+
+export const ContainerInfoAddApplication = styled('div')`
+box-sizing: border-box;
+position: absolute;
+width: 634px;
+height: 374px;
+left: 359px;
+top: 193px;
+
+background:${colors.background.one};
+
+border: 1px solid ${colors.background.ten};
+border-radius: 8px;
+`;
