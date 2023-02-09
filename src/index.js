@@ -4,21 +4,7 @@ import { colors } from './colors';
 export { colors } from './colors';
 export * from './icons';
 
-export const Container = styled('div')(
-	space,
-	border,
-	color,
-	variant({
-		variants: {
-			center: {
-				display: 'flex',
-				justifyContent: 'center',
-				alingItems: 'center',
-				width: 'auto',
-			},
-		},
-	})
-);
+export const Container = styled('div')(space, border, color);
 export const LoginButton = styled('button')(
 	space,
 	variant({
@@ -176,7 +162,6 @@ export const NavBarContainer = styled('div')`
 	align-items: flex-start;
 	padding: 0px;
 	gap: 722px;
-	position: absolute;
 	width: 100%;
 	height: 32px;
 	background: ${colors.background.three};
@@ -198,33 +183,37 @@ export const Tab = styled('div')(
 	variant({
 		variants: {
 			primary: {
+				cursor: 'pointer',
 				justifyContent: 'center',
 				display: 'flex',
 				flexDirection: 'row',
 				alignItems: 'center',
-				width: '89px',
 				height: '32px',
 				gap: '4px',
 				background: 'transparent',
 				borderWidth: '0px 1px',
 				borderStyle: 'solid',
 				borderColor: colors.background.six,
+				color: colors.grey.five,
+				padding: '0px 10px',
 				'&:hover': {
 					color: colors.primary.two,
 				},
 			},
 			active: {
 				justifyContent: 'center',
+				color: colors.grey.five,
 				display: 'flex',
 				flexDirection: 'row',
 				alignItems: 'center',
-				width: '89px',
 				height: '32px',
 				gap: '4px',
 				background: colors.background.one,
 				borderWidth: '0px 1px',
 				borderStyle: 'solid',
 				borderColor: colors.background.six,
+				cursor: 'pointer',
+				padding: '0px 10px',
 			},
 			more: {
 				justifyContent: 'center',
@@ -238,6 +227,8 @@ export const Tab = styled('div')(
 				borderWidth: '0px 1px',
 				borderStyle: 'solid',
 				borderColor: colors.background.six,
+				color: colors.grey.five,
+				cursor: 'pointer',
 			},
 		},
 	})
@@ -262,6 +253,7 @@ export const AddApplication = styled('div')`
 	gap: 4px;
 	width: 144px;
 	height: 32px;
+	cursor: pointer;
 `;
 
 export const UserTab = styled('div')`
@@ -318,14 +310,27 @@ export const ContainerMoreApps = styled('div')`
 	position: absolute;
 	background: ${colors.background.five};
 	width: 200px;
-	height: 308px;
+	height: 312px;
 	border: solid 1px ${colors.primary.two};
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14),
+		0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	height: auto;
+	max-height: 312px;
+	overflow-x: hidden;
+`;
+
+export const ContainerSignOut = styled('div')`
+	width: 96px;
+	height: 28px;
+	background: ${colors.background.five};
+	border: 1px solid ${colors.primary.two};
 	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14),
 		0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
 	border-radius: 4px;
 `;
 
-export const TabMore = styled('div')(
+export const TabDropdown = styled('div')(
 	color,
 	space,
 	variant({
@@ -338,6 +343,7 @@ export const TabMore = styled('div')(
 				height: '38px',
 				background: 'transparent',
 				color: colors.grey.ten,
+				cursor: 'pointer',
 				'&:hover': {
 					background: colors.background.three,
 					color: colors.primary.two,
@@ -350,7 +356,69 @@ export const TabMore = styled('div')(
 				padding: '8px 16px',
 				height: '38px',
 				background: colors.primary.two,
+				cursor: 'pointer',
 			},
 		},
 	})
 );
+
+export const SelectClasses = styled('button')(
+	space,
+	variant({
+		variants: {
+			primary: {
+				display: 'flex',
+				width: '160px',
+				height: '40px',
+				alignItems: 'center',
+				justifyContent: 'center',
+				flowDirection: 'row',
+				background: 'transparent',
+				border: `solid 1px ${colors.background.ten}`,
+				color: colors.grey.ten,
+				borderRadius: '4px',
+				gap: '16px',
+				'&:hover': {
+					border: `solid 1px ${colors.primary.two}`,
+					color: colors.primary.two,
+				},
+			},
+			active: {
+				display: 'flex',
+				width: '160px',
+				height: '40px',
+				alignItems: 'center',
+				justifyContent: 'center',
+				flowDirection: 'row',
+				background: 'transparent',
+				border: `solid 1px ${colors.primary.two}`,
+				color: colors.primary.two,
+				borderRadius: '4px',
+				gap: '16px',
+			},
+		},
+	})
+);
+
+export const ContainerClasses = styled('div')`
+	position: absolute;
+	background: ${colors.background.five};
+	width: 310px;
+	height: 301px;
+	border: solid 1px ${colors.primary.two};
+	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14),
+		0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	height: auto;
+	max-height: 312px;
+	overflow-x: hidden;
+`;
+
+export const InputSearchClass = styled('input')`
+	background: transparent;
+	border: none;
+	width: 100%;
+	text-indent: 10px;
+	height: 34px;
+	color: ${colors.grey.six};
+`;
