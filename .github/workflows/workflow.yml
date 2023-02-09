@@ -71,10 +71,10 @@ jobs:
 # Test components
 
   slack_pull_request:
+    if: ${{ github.event_name == 'pull_request' }}
     runs-on: ubuntu-latest
     steps:
     - name: Notify slack pull request open
-      if: ${{ github.event_name == 'pull_request' }}
       env: 
         SLACK_WEBHOOK_URL : ${{secrets.SLACK_PULL_REQUEST_WEBHOOK}}
         PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
@@ -94,6 +94,7 @@ jobs:
       uses: jun3453/slack-pr-open-notification-action@v1.3.0
  # Deploy artifact to AWS
   deploy:
+    if: ${{ github.event_name == 'push' }}
     needs: [build, lint]
     runs-on: ubuntu-latest
     steps: 
