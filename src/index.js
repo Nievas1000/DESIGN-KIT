@@ -426,11 +426,11 @@ export const InputSearchClass = styled('input')`
 export const ContainerInfoAddApplication = styled('div')`
 box-sizing: border-box;
 
-position: absolute;
-width: 630px;
-height: 481px;
-left: 372px;
-top: 176px;
+max-width: 630px;
+margin: 1.5rem;
+
+
+
 
 background:${colors.background.one};
 
