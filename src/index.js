@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { border, color, space, variant } from 'styled-system';
+import { border, color, position, space, variant } from 'styled-system';
 import { colors } from './colors';
 export { colors } from './colors';
 export * from './icons';
@@ -174,7 +174,7 @@ export const ContainerTabs = styled('div')`
 	flex-direction: row;
 	align-items: flex-start;
 	padding: 0px;
-	height: 32px;
+	height: 40px;
 `;
 
 export const Tab = styled('div')(
@@ -194,7 +194,7 @@ export const Tab = styled('div')(
 				borderWidth: '0px 1px',
 				borderStyle: 'solid',
 				borderColor: colors.background.six,
-				color: colors.grey.five,
+				color: colors.grey.six,
 				padding: '0px 10px',
 				'&:hover': {
 					color: colors.primary.two,
@@ -202,7 +202,7 @@ export const Tab = styled('div')(
 			},
 			active: {
 				justifyContent: 'center',
-				color: colors.grey.five,
+				color: colors.grey.six,
 				display: 'flex',
 				flexDirection: 'row',
 				alignItems: 'center',
@@ -251,7 +251,7 @@ export const AddApplication = styled('div')`
 	justify-content: center;
 	padding: 0px 16px;
 	gap: 4px;
-	width: 144px;
+	width: 140px;
 	height: 32px;
 	cursor: pointer;
 `;
@@ -274,7 +274,7 @@ export const Settings = styled('div')`
 	padding: 0px 16px;
 	gap: 4px;
 	width: 76px;
-	height: 32px;
+	height: 40px;
 	border-width: 0px 1px;
 	border-style: solid;
 	border-color: ${colors.background.six};
@@ -320,15 +320,37 @@ export const ContainerMoreApps = styled('div')`
 	overflow-x: hidden;
 `;
 
-export const ContainerSignOut = styled('div')`
-	width: 96px;
-	height: 28px;
-	background: ${colors.background.five};
-	border: 1px solid ${colors.primary.two};
-	box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.14),
-		0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2);
-	border-radius: 4px;
+export const ContainerPersonalZone = styled('div')`
+	width: 239px;
+	height: 112px;
+	background: ${colors.background.three};
+	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	border-radius: 8px;
+	margin-top: 10px;
+	margin-right: 24px;
 `;
+
+export const PersonalZoneTab = styled('div')(
+	space,
+	color,
+	position,
+	variant({
+		variants: {
+			primary: {
+				position: 'fixed',
+				display: 'flex',
+				width: '215px',
+				height: '40px',
+				alignItems: 'center',
+				marginLeft: '22px',
+				color: colors.grey.ten,
+				'&:hover': {
+					color: colors.primary.two,
+				},
+			},
+		},
+	})
+);
 
 export const TabDropdown = styled('div')(
 	color,
@@ -424,14 +446,244 @@ export const InputSearchClass = styled('input')`
 `;
 
 export const ContainerInfoAddApplication = styled('div')`
-box-sizing: border-box;
+	box-sizing: border-box;
 
-    max-width: 629px;
-    margin: 3rem 5rem;
-    padding: 1rem;
-    
-background:${colors.background.one};
+	max-width: 629px;
+	margin: 3rem 5rem;
+	padding: 1rem;
 
-border: 1px solid ${colors.background.ten};
-border-radius: 8px;
+	background: ${colors.background.one};
+
+	border: 1px solid ${colors.background.ten};
+	border-radius: 8px;
 `;
+
+export const InputDegree = styled('input')`
+	height: 2px;
+	width: 320px;
+	-webkit-appearance: none;
+	appearance: none;
+	cursor: pointer;
+	z-index: 1;
+	&::-webkit-slider-runnable-track {
+		background: #282a29;
+		height: 2px;
+	}
+	&::-webkit-slider-thumb {
+		-webkit-appearance: none; /* Override default look */
+		appearance: none;
+		background: url(${'./img/iconDegree.png'}) #47bc82;
+		background-size: 65%;
+		background-position: center;
+		background-repeat: no-repeat;
+		width: 24px;
+		height: 24px;
+		margin-top: -10px;
+		box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12),
+			0px 1px 3px rgba(0, 0, 0, 0.2);
+		border-radius: 16px;
+	}
+`;
+export const ContainerRangeLabels = styled('div')`
+	position: absolute;
+	display: flex;
+	list-style: none;
+	color: white;
+	top: 55%;
+	left: 49%;
+	transform: translate(-50%, -41%);
+	text-align: center;
+`;
+
+export const ContainerMenuSettings = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				width: '370px',
+				height: '798px',
+				background: colors.background.four,
+				borderRadius: '8px',
+				marginLeft: '24px',
+				marginTop: '26px',
+				boxShadow:
+					'0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)',
+			},
+		},
+	})
+);
+
+export const TabMenuSettings = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				cursor: 'pointer',
+				display: 'flex',
+				width: '344px',
+				height: '58px',
+				background: colors.primary.two,
+				border: `solid 1px ${colors.background.ten}`,
+				borderRadius: '8px',
+				marginLeft: '13px',
+				marginTop: '16px',
+				borderBottom: `1px solid ${colors.background.seven}`,
+				alignItems: 'center',
+			},
+		},
+	})
+);
+
+export const ContainerSettingOpition = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				width: '1157px',
+				height: '798px',
+				background: colors.background.four,
+				borderRadius: '8px',
+				marginLeft: '24px',
+				marginTop: '26px',
+				boxShadow:
+					'0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)',
+			},
+		},
+	})
+);
+
+export const ContainerDeleteOption = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				display: 'flex',
+				marginLeft: '24px',
+				marginTop: '26px',
+			},
+		},
+	})
+);
+
+export const Button = styled('button')(
+	space,
+	color,
+	variant({
+		variants: {
+			delete: {
+				display: 'flex',
+				width: '100px',
+				height: '42px',
+				background: colors.background.four,
+				border: `solid 2px ${colors.feedback.error}`,
+				borderRadius: '8px',
+				marginRight: '24px',
+				alignItems: 'center',
+				justifyContent: 'center',
+				color: colors.feedback.error,
+				'&:hover': {
+					background: colors.feedback.error,
+					border: `2px solid ${colors.feedback.error}`,
+					color: colors.grey.ten,
+				},
+			},
+			confirm: {
+				display: 'flex',
+				width: '100px',
+				height: '42px',
+				background: colors.background.four,
+				border: `solid 2px ${colors.feedback.succes}`,
+				borderRadius: '8px',
+				marginRight: '24px',
+				alignItems: 'center',
+				justifyContent: 'center',
+				color: colors.feedback.error,
+				'&:hover': {
+					background: colors.feedback.succes,
+					border: `2px solid ${colors.feedback.succes}`,
+					color: colors.grey.ten,
+				},
+			},
+		},
+	})
+);
+
+export const ContainerModalDeleteAccount = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				width: '512px',
+				height: '290px',
+				background: colors.background.four,
+				borderRadius: '8px',
+			},
+		},
+	})
+);
+
+export const DeleteAplicationTab = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				position: 'absolute',
+				zIndex: '1',
+				width: '310px',
+				color: colors.grey.ten,
+				height: '44px',
+				background: colors.background.five,
+				borderRadius: '4px',
+				border: `1px solid ${colors.primary.two}`,
+				boxShadow:
+					'0px 16px 24px rgba(0, 0, 0, 0.14), 0px 6px 30px rgba(0, 0, 0, 0.12), 0px 8px 10px rgba(0, 0, 0, 0.2)',
+				'&:hover': {
+					color: colors.primary.two,
+				},
+			},
+		},
+	})
+);
+
+export const ModalDeleteAplication = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				width: '512px',
+				height: '216px',
+				background: colors.background.four,
+				borderRadius: '8px',
+				border: `1px solid ${colors.primary.two}`,
+				boxShadow:
+					'0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)',
+			},
+		},
+	})
+);
+
+export const ContainerDeletedConfirm = styled('div')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				display: 'flex',
+				width: '242px',
+				height: '54px',
+				background: colors.feedback.succes,
+				borderRadius: '8px',
+				color: colors.grey.ten,
+				filter:
+					'drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12)) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))',
+			},
+		},
+	})
+);
