@@ -1088,7 +1088,7 @@ export const TaffiIcon = () => {
 
 export const ApiIcon = () => {
 	return (
-		<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+		<svg width="50" height="50" viewBox="0 0 50 50" fill="none" xmlns="http://www.w3.org/2000/svg">
 			<rect width="50" height="50" fill="url(#pattern0)" />
 			<defs>
 				<pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
