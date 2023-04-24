@@ -1,5 +1,12 @@
 import styled from 'styled-components';
-import { border, color, position, space, variant } from 'styled-system';
+import {
+	border,
+	color,
+	fontWeight,
+	position,
+	space,
+	variant,
+} from 'styled-system';
 import { colors } from './colors';
 export { colors } from './colors';
 export * from './icons';
@@ -39,6 +46,34 @@ export const LoginButton = styled('button')(
 				gap: '8px',
 				padding: '8px 16px',
 			},
+			mobile: {
+				position: 'relative',
+				display: 'flex',
+				width: '108px',
+				height: '40px',
+				alingItems: 'flex-start',
+				flowDirection: 'row',
+				background: colors.background.four,
+				border: `solid 2px ${colors.primary.two}`,
+				borderRadius: '8px',
+				gap: '8px',
+				padding: '8px 16px',
+				color: colors.primary.two,
+			},
+			mobile_active: {
+				position: 'relative',
+				display: 'flex',
+				width: '108px',
+				height: '40px',
+				alingItems: 'flex-start',
+				flowDirection: 'row',
+				background: colors.primary.two,
+				border: 'none',
+				borderRadius: '8px',
+				gap: '8px',
+				padding: '8px 16px',
+				color: colors.grey.ten,
+			},
 		},
 	})
 );
@@ -46,6 +81,7 @@ export const LoginButton = styled('button')(
 export const Title = styled('h1')(
 	color,
 	space,
+	fontWeight,
 	variant({
 		variants: {
 			one: {
@@ -80,6 +116,7 @@ export const Subtitle = styled('h3')(
 	color,
 	space,
 	border,
+	fontWeight,
 	variant({
 		variants: {
 			one: {
@@ -97,6 +134,7 @@ export const Subtitle = styled('h3')(
 export const Text = styled('p')(
 	color,
 	space,
+	fontWeight,
 	variant({
 		variants: {
 			one: {
@@ -118,6 +156,7 @@ export const Text = styled('p')(
 export const TextLink = styled('a')(
 	color,
 	space,
+	fontWeight,
 	variant({
 		variants: {
 			one: {
@@ -142,6 +181,7 @@ export const TextLink = styled('a')(
 export const ButtonText = styled('p')(
 	color,
 	space,
+	fontWeight,
 	variant({
 		variants: {
 			one: {
@@ -202,7 +242,7 @@ export const Tab = styled('div')(
 			},
 			active: {
 				justifyContent: 'center',
-				color: colors.grey.six,
+				color: colors.grey.nine,
 				display: 'flex',
 				flexDirection: 'row',
 				alignItems: 'center',
@@ -661,7 +701,6 @@ export const ModalDeleteAplication = styled('div')(
 				height: '216px',
 				background: colors.background.four,
 				borderRadius: '8px',
-				border: `1px solid ${colors.primary.two}`,
 				boxShadow:
 					'0px 8px 10px rgba(0, 0, 0, 0.14), 0px 3px 14px rgba(0, 0, 0, 0.12), 0px 5px 5px rgba(0, 0, 0, 0.2)',
 			},
@@ -683,6 +722,24 @@ export const ContainerDeletedConfirm = styled('div')(
 				color: colors.grey.ten,
 				filter:
 					'drop-shadow(0px 8px 10px rgba(0, 0, 0, 0.14)) drop-shadow(0px 3px 14px rgba(0, 0, 0, 0.12)) drop-shadow(0px 5px 5px rgba(0, 0, 0, 0.2))',
+			},
+		},
+	})
+);
+
+export const CircleMetrics = styled('span')(
+	space,
+	color,
+	variant({
+		variants: {
+			primary: {
+				borderRadius: '50%',
+				background: colors.grey.four,
+				border: `1px solid ${colors.grey.six}`,
+				width: '16px',
+				height: '16px',
+				boxShadow:
+					'0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.12), 0px 1px 3px rgba(0, 0, 0, 0.2)',
 			},
 		},
 	})
