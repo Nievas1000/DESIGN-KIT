@@ -1,5 +1,6 @@
 // eslint-disable-next-line
 import React from 'react';
+import openListIcon from './img/open.png';
 export const GoogleIcon = () => {
 	return (
 		<svg
@@ -1084,4 +1085,8 @@ export const TaffiIcon = () => {
 			</defs>
 		</svg>
 	);
+};
+
+export const OpenListIcon = () => {
+	return <img src={openListIcon} />;
 };
