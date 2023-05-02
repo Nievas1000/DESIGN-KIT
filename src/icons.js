@@ -1120,3 +1120,20 @@ export const InfoIcon = () => {
 		</svg>
 	);
 };
+
+export const ArrowIconInverter = () => {
+	return (
+		<svg
+			width='10'
+			height='6'
+			viewBox='0 0 10 6'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+		>
+			<path
+				d='M5 0L0.5 4.5L1.5575 5.5575L5 2.1225L8.4425 5.5575L9.5 4.5L5 0Z'
+				fill='#47BC82'
+			/>
+		</svg>
+	);
+};
