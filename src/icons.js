@@ -1121,6 +1121,7 @@ export const InfoIcon = () => {
 	);
 };
 
+
 export const ArrowIconInverter = () => {
 	return (
 		<svg
@@ -1134,6 +1135,23 @@ export const ArrowIconInverter = () => {
 				d='M5 0L0.5 4.5L1.5575 5.5575L5 2.1225L8.4425 5.5575L9.5 4.5L5 0Z'
 				fill='#47BC82'
 			/>
+			</svg>
+	)
+};
+
+export const BurgerMenuIcon = () => {
+	return (
+		<svg
+			width='18'
+			height='12'
+			viewBox='0 0 18 12'
+			fill='none'
+			xmlns='http://www.w3.org/2000/svg'
+		>
+			<path d='M0 1H18' stroke='#8A8A8A' strokeWidth='2' />
+			<path d='M0 6H18' stroke='#8A8A8A' strokeWidth='2' />
+			<path d='M0 11H18' stroke='#8A8A8A' strokeWidth='2' />
+
 		</svg>
 	);
 };
